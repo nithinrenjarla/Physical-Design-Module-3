@@ -100,14 +100,14 @@ Students will also study the major stages of the RTL-to-GDSII flow, including sy
 
 # 1. CMOS Inverter SPICE Simulation and Characterization
 
-# 1.1 CMOS Inverter and SPICE Model Setup
+  # 1.1 CMOS Inverter and SPICE Model Setup
 The first stage of the module focuses on setting up the CMOS inverter for transistor-level simulation. A CMOS inverter consists of a PMOS transistor connected to the supply voltage and an NMOS transistor connected to ground.
 
 The SPICE model provides the electrical characteristics of the MOS devices and allows the inverter to be analyzed under realistic device parameters. The transistor dimensions, supply voltage and input waveform are selected before performing the simulation.
 
 The simulation setup is important because the accuracy of the output waveform and delay measurements depends on the correct device models and circuit parameters. The NMOS and PMOS dimensions are selected according to the required inverter design.
 
-# 1.2 Simulation Environment and Device Parameters
+ # 1.2 Simulation Environment and Device Parameters
 The next stage involves configuring the simulation environment and defining the required transistor parameters. The width-to-length ratio of the PMOS and NMOS devices has a direct effect on the switching behavior of the inverter.
 
 The selected dimensions determine the relative drive strengths of the pull-up and pull-down networks. Proper sizing is required to obtain balanced rise and fall characteristics. 
@@ -115,7 +115,7 @@ The selected dimensions determine the relative drive strengths of the pull-up an
 <img width="700" alt="S" src="https://github.com/user-attachments/assets/553b06c1-9dcf-4bfa-8bb1-46a96b34f02e" />
 
 
-# 1.3 SPICE Simulation Execution
+ # 1.3 SPICE Simulation Execution
 After defining the circuit and device parameters, the SPICE simulation is executed. The simulator solves the electrical behavior of the inverter as the input voltage changes with time.
 
 The input signal is applied to the common gate terminal of the PMOS and NMOS transistors. Depending on the input voltage, one transistor turns ON while the other turns OFF, producing the inverted output. 
@@ -127,7 +127,7 @@ Figure 3: Execution of CMOS inverter SPICE simulation
 
 This step verifies that the inverter operates correctly before detailed timing and static characterization are performed.
 
-# 1.4 Input and Output Waveforms
+ # 1.4 Input and Output Waveforms
 The transient simulation produces both the input and output waveforms. The output waveform is complementary to the input waveform, demonstrating the fundamental operation of the CMOS inverter.
 
 When the input is LOW, the PMOS transistor conducts and the output is pulled towards the supply voltage. When the input becomes HIGH, the NMOS transistor conducts and the output is pulled towards ground.
@@ -139,7 +139,7 @@ Figure 4: CMOS inverter input and output waveforms
 
 The waveform confirms the correct logical inversion operation and also provides the information required for measuring propagation delay and transition times.
 
-# 1.5 Transient Response Analysis
+ # 1.5 Transient Response Analysis
 The transient response is examined to understand how quickly the inverter responds to changes in the input signal.
 
 The transition of the output does not occur instantaneously because the transistor network and load capacitance require a finite amount of time to charge or discharge. This delay is an important performance parameter in digital circuits. 
@@ -151,7 +151,7 @@ Figure 5: Transient response of the CMOS inverter
 
 The measured waveform is used to determine parameters such as rise time, fall time and propagation delay.
 
-# 1.6 Detailed Waveform Observation
+ # 1.6 Detailed Waveform Observation
 The simulation waveform is further examined over a selected time interval. This allows the transition points of the input and output signals to be identified accurately.
 
 The time difference between corresponding input and output transitions represents the propagation delay of the inverter. 
@@ -163,7 +163,7 @@ Figure 6: Detailed observation of the transient waveform
 
 Accurate waveform observation is necessary for obtaining reliable timing measurements and comparing different transistor sizing conditions.
 
-# 1.7 Effect of PMOS/NMOS Sizing
+ # 1.7 Effect of PMOS/NMOS Sizing
 The performance of a CMOS inverter strongly depends on the relative sizing of the PMOS and NMOS transistors. Different width ratios are therefore simulated and compared.
 
 Increasing transistor width increases the available drive current and can reduce the time required to charge or discharge the load. However, excessive sizing also increases capacitance and may affect overall performance. 
@@ -175,7 +175,7 @@ Figure 7: Effect of transistor sizing on inverter behavior
 
 The comparison helps identify a suitable PMOS-to-NMOS sizing ratio for achieving balanced inverter operation.
 
-# 1.8 Static Behavior Evaluation
+ # 1.8 Static Behavior Evaluation
 Static characterization is performed using the Voltage Transfer Characteristic (VTC) of the CMOS inverter.
 
 The VTC represents the relationship between the input voltage and output voltage. It shows three important operating regions: the logic HIGH region, the transition region and the logic LOW region.
