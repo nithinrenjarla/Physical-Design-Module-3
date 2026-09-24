@@ -112,14 +112,16 @@ The next stage involves configuring the simulation environment and defining the 
 
 The selected dimensions determine the relative drive strengths of the pull-up and pull-down networks. Proper sizing is required to obtain balanced rise and fall characteristics. 
 
-IIIIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/553b06c1-9dcf-4bfa-8bb1-46a96b34f02e" />
+
 
 # 1.3 SPICE Simulation Execution
 After defining the circuit and device parameters, the SPICE simulation is executed. The simulator solves the electrical behavior of the inverter as the input voltage changes with time.
 
 The input signal is applied to the common gate terminal of the PMOS and NMOS transistors. Depending on the input voltage, one transistor turns ON while the other turns OFF, producing the inverted output. 
 
-IIIIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/11d943f4-a08b-4dbf-9fda-49ee458a7e10" />
+
 
 Figure 3: Execution of CMOS inverter SPICE simulation
 
@@ -130,7 +132,8 @@ The transient simulation produces both the input and output waveforms. The outpu
 
 When the input is LOW, the PMOS transistor conducts and the output is pulled towards the supply voltage. When the input becomes HIGH, the NMOS transistor conducts and the output is pulled towards ground.
 
-IIIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/d89150ee-6607-409f-a5da-3b91f4c47fbf" />
+
 
 Figure 4: CMOS inverter input and output waveforms
 
@@ -141,7 +144,8 @@ The transient response is examined to understand how quickly the inverter respon
 
 The transition of the output does not occur instantaneously because the transistor network and load capacitance require a finite amount of time to charge or discharge. This delay is an important performance parameter in digital circuits. 
 
-IIIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/72fe74b3-6d3b-4226-8f17-be082399ec4d" />
+
 
 Figure 5: Transient response of the CMOS inverter
 
@@ -152,7 +156,8 @@ The simulation waveform is further examined over a selected time interval. This 
 
 The time difference between corresponding input and output transitions represents the propagation delay of the inverter. 
 
-IIIIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/2c623326-b80e-4340-b7b1-98f10d0d5354" />
+
 
 Figure 6: Detailed observation of the transient waveform
 
@@ -163,7 +168,8 @@ The performance of a CMOS inverter strongly depends on the relative sizing of th
 
 Increasing transistor width increases the available drive current and can reduce the time required to charge or discharge the load. However, excessive sizing also increases capacitance and may affect overall performance. 
 
-IIIIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/99e258a2-4e0f-430c-9013-acc192373eea" />
+
 
 Figure 7: Effect of transistor sizing on inverter behavior
 
@@ -174,7 +180,8 @@ Static characterization is performed using the Voltage Transfer Characteristic (
 
 The VTC represents the relationship between the input voltage and output voltage. It shows three important operating regions: the logic HIGH region, the transition region and the logic LOW region.
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/47346d1f-ca49-4676-bc84-91a06d2443b4" />
+
 
 Figure 8: Static voltage-transfer characteristic
 
@@ -185,7 +192,8 @@ The VTC curves for different transistor sizing ratios are compared to study the 
 
 The switching point changes when the relative strength of the PMOS and NMOS devices changes. By comparing these curves, the effect of sizing on the logic threshold and inverter symmetry can be understood. 
 
-IIIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/c3db69a2-0e7f-4418-bc8f-22d974ce3556" />
+
 
 Figure 9: CMOS inverter robustness evaluation
 
@@ -194,12 +202,7 @@ This analysis is useful for selecting a device ratio that provides stable switch
 # 1.10 Switching Threshold Voltage
 The switching threshold voltage is the input voltage at which the inverter changes from its HIGH-output state to its LOW-output state.
 
-The threshold voltage is affected by the transistor characteristics, device sizing, body voltage and fabrication parameters. The body effect is particularly important when the source-to-body voltage is not zero. 
-
-IIIII
-
-Figure 10: Switching threshold analysis
-
+The threshold voltage is affected by the transistor characteristics, device sizing, body voltage and fabrication parameters. The body effect is particularly important when the source-to-body voltage is not zero.
 The calculated and simulated values are compared to understand the relationship between the theoretical equations and the actual device behavior.
 
 # 1.11 Voltage Transfer Characteristic Analysis
@@ -207,7 +210,8 @@ The voltage-transfer curve provides a complete static representation of the CMOS
 
 At low input voltage, the PMOS is ON and the NMOS is OFF, so the output remains close to the supply voltage. At high input voltage, the NMOS is ON and the PMOS is OFF, causing the output to approach ground. 
 
-IIIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/0c0da82e-7c5c-416b-bad8-e4875ece2a90" />
+
 
 Figure 11: CMOS inverter VTC
 
@@ -218,7 +222,8 @@ A second sizing condition is evaluated to observe how changing the transistor di
 
 Changing the PMOS/NMOS ratio modifies the balance between the pull-up and pull-down networks. This can shift the switching threshold and change the rise and fall delays. 
 
-IIIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/470f5959-f5ab-45bb-abb7-641dd312ace9" />
+
 
 Figure 12: Comparison of inverter sizing conditions
 
@@ -229,7 +234,8 @@ The values obtained from the simulation are verified using the calculated result
 
 The numerical verification helps ensure that the extracted parameter is consistent with the theoretical calculation. 
 
-IIIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/4d51fb51-8503-4a26-9e54-19746bf1bd87" />
+
 
 Figure 13: Verification of calculated simulation parameter
 
@@ -240,7 +246,8 @@ The final characterization summarizes the behavior of the selected CMOS inverter
 
 The voltage-transfer characteristic, switching behavior and timing response are used together to evaluate whether the chosen transistor sizing provides the desired performance. 
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/72cd24be-9050-4618-8767-b34db7fb9838" />
+
 
 Figure 14: Final CMOS inverter characterization
 
