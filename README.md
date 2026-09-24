@@ -11,14 +11,24 @@ Students will also study the major stages of the RTL-to-GDSII flow, including sy
 - Explain the operation and characteristics of a CMOS inverter.
 
 - Understand basic CMOS fabrication steps and mask layers.
+-  
 - Describe the structure of standard cells.
--Understand the significance of the SKY130A technology.
--Generate and examine a synthesized gate-level netlist.
--Explain the purpose of floorplanning and power planning.
--Understand placement and optimization of standard cells.
--Explain the requirement of Clock Tree Synthesis.
--Understand routing and interconnection between cells.
--Identify the purpose of Design Rule Checking (DRC) and Layout Versus Schematic (LVS).
--Understand the generation of the final GDSII layout.
--Gain practical familiarity with an open-source RTL-to-GDSII flow.
+- 
+- Understand the significance of the SKY130A technology.
+- 
+- Generate and examine a synthesized gate-level netlist.
+- 
+- Explain the purpose of floorplanning and power planning.
+- 
+- Understand placement and optimization of standard cells.
+- 
+- Explain the requirement of Clock Tree Synthesis.
+- 
+- Understand routing and interconnection between cells.
+- 
+- Identify the purpose of Design Rule Checking (DRC) and Layout Versus Schematic (LVS).
+- 
+- Understand the generation of the final GDSII layout.
+- 
+- Gain practical familiarity with an open-source RTL-to-GDSII flow.
 
