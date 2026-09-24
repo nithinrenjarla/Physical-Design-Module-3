@@ -256,7 +256,7 @@ The characterization results provide the basis for proceeding towards the physic
 
 # 2. SKY130A Standard-Cell Design Flow
 
-# 2.1 Cloning the Design Repository
+#  2.1 Cloning the Design Repository
 The standard-cell design environment is prepared by cloning the required repository into the OpenLane working directory.
 
 Git is used to obtain the required source files, configuration files, technology information and supporting resources. 
