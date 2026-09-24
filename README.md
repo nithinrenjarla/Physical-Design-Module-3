@@ -261,7 +261,8 @@ The standard-cell design environment is prepared by cloning the required reposit
 
 Git is used to obtain the required source files, configuration files, technology information and supporting resources. 
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/8efa10f4-6cf3-4d8c-acdd-8782e537eae5" />
+
 
 Figure 15: Cloning the standard-cell design repository
 
@@ -270,12 +271,7 @@ Repository cloning ensures that the design environment contains all the files re
 # 2.2 Preparing the SKY130A Technology File
 After cloning the repository, the required SKY130A technology file is copied into the appropriate standard-cell design directory.
 
-The technology file contains important information required by the layout and physical-design tools to interpret the process layers and device structures correctly. 
-
-IIII
-
-Figure 16: Copying the SKY130A technology file
-
+The technology file contains important information required by the layout and physical-design tools to interpret the process layers and device structures correctly.
 Correct placement of the technology file is essential for opening and processing the standard-cell layout using the SKY130A technology.
 
 # 2.3 CMOS Inverter Layout
@@ -283,7 +279,8 @@ The CMOS inverter layout is opened using the layout editor. The physical arrange
 
 The layout represents the physical implementation of the transistor-level CMOS inverter designed during the simulation stage. 
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/b59bce4e-84e7-40b5-8217-df5ca96948ea" />
+
 
 Figure 17: SKY130A CMOS inverter layout
 
@@ -299,7 +296,8 @@ The fabrication process begins with the selection of a P-type silicon substrate.
 
 The substrate provides the mechanical and electrical foundation on which the CMOS devices are fabricated. The substrate is selected with a controlled doping concentration, resistivity and crystal orientation. 
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/7f26f19d-31cf-4977-8647-3a2210c64899" />
+
 
 Figure 18: Selection of P-type silicon substrate
 
@@ -310,7 +308,8 @@ The first mask is used to define the active regions in which transistors will ev
 
 Field oxide is grown over the regions that must be electrically isolated. The LOCOS process, or Local Oxidation of Silicon, is used to separate active device areas. 
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/f468a309-c815-4a68-bbf2-529c374bbedd" />
+
 
 Figure 19: Active region formation using Mask 1
 
@@ -323,7 +322,8 @@ The next stage forms the required well regions for complementary MOS devices.
 
 Boron is a P-type dopant and is implanted into the selected region to form the P-well. The implantation energy and dose are controlled to obtain the required doping profile. 
 
-IIIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/c3243c47-9730-4eac-ad25-aa6973b8e8c2" />
+
 
 Figure 20: P-well formation using boron implantation
 
@@ -334,7 +334,8 @@ Phosphorus, which is an N-type dopant, is implanted into the selected region to 
 
 The N-well provides the body region required for the PMOS transistor in a CMOS process.
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/41fb7314-e654-4bee-91e1-6ecc4c186630" />
+
 
 Figure 21: N-well formation using phosphorus implantation
 
@@ -345,7 +346,8 @@ After the well regions are formed, the process moves towards gate formation.
 
 The gate is one of the most important parts of a MOS transistor because it controls the formation of the conducting channel between source and drain. 
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/e0dd9c35-015d-44aa-80ec-fd912742ccfa" />
+
 
 Figure 22: Initial stage of gate formation
 
@@ -356,7 +358,8 @@ The threshold voltage of a MOS transistor is not constant under all operating co
 
 The threshold-voltage equation includes the body-effect term, which represents the change in threshold voltage when the source and body are at different potentials.
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/c21e1f49-b5da-4905-b2b1-2457c7b5811b" />
+
 
 Figure 23: Threshold voltage and body-effect analysis
 
@@ -367,7 +370,8 @@ Photolithography is used to define the required gate pattern. A photoresist laye
 
 Mask 4 defines the region that is retained or removed during the subsequent processing step. 
 
-IIIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/35757ea9-4823-48fc-87a5-1b9a3b7ba382" />
+
 
 Figure 24: Gate formation using Mask 4
 
@@ -378,7 +382,8 @@ The next mask is applied to further define the required gate-related structure.
 
 The photoresist acts as a temporary protective layer, allowing selected regions to undergo etching or processing while protecting the remaining regions.
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/ca65e8aa-a87f-47ba-b440-168682864371" />
+
 
 Figure 25: Gate processing using Mask 5
 
@@ -389,7 +394,8 @@ Mask 6 is used during the continuation of the gate-processing sequence.
 
 The patterned structure now provides the physical definition required for controlling the later source/drain implantation regions.
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/8e631db6-31ea-4389-a479-1b2ec4ff6f3f" />
+
 
 Figure 26: Gate formation using Mask 6
 
@@ -402,11 +408,6 @@ The gate acts as the self-aligned reference for forming the source and drain reg
 The Lightly Doped Drain (LDD) process introduces lightly doped regions close to the transistor channel.
 
 These regions reduce the electric field near the drain and help improve device reliability. The LDD structure is particularly important for reducing hot-carrier effects. 
-
-IIII
-
-Figure 27: LDD formation using Mask 7
-
 The lightly doped extension provides a gradual transition between the heavily doped source/drain region and the channel.
 
 # 4.2 LDD Formation – Mask 8
@@ -414,7 +415,8 @@ The complementary LDD implantation is performed for the opposite transistor type
 
 The correct dopant type is selected depending on whether the region belongs to the NMOS or PMOS device. 
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/8f353b30-cac6-48bf-ad5b-1dd91e7d80a4" />
+
 
 Figure 28: Complementary LDD implantation using Mask 8
 
@@ -427,7 +429,8 @@ After LDD formation, heavily doped source and drain regions are created.
 
 The implantation is aligned with the gate structure so that the source and drain are positioned on either side of the channel. 
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/61bc1b69-0417-4487-b0b8-bfaf5d5b06b5" />
+
 
 Figure 29: Source and drain formation using Mask 9
 
@@ -437,11 +440,6 @@ The heavily doped regions provide low-resistance electrical terminals for the MO
 The complementary source/drain implantation is then performed for the opposite transistor type.
 
 The NMOS and PMOS require opposite conductivity types for their source and drain regions. 
-
-IIII
-
-Figure 30: Complementary source and drain implantation
-
 At this stage, the essential transistor structures are present: wells, gate, source and drain. These structures form the basic building blocks of the CMOS inverter.
 
 # 6. Contacts and Interconnect Formation
@@ -451,7 +449,8 @@ Once the transistor regions are completed, electrical contacts are created to co
 
 The contact process provides a low-resistance electrical path from the source, drain and gate regions to the metal interconnect system. 
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/da43931d-ac4b-4216-89a3-564e54c515a0" />
+
 
 Figure 31: Formation of local contacts and interconnects
 
@@ -466,7 +465,8 @@ The final stage shown in this module is the formation of higher-level metal inte
 
 Metal layers are used to electrically connect different transistor terminals and different parts of the integrated circuit. Contact holes are opened where connections between different layers are required. 
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/6be891f7-f0ed-4446-9440-6c0fa2d89a42" />
+
 
 Figure 32: Higher-level metal formation
 
@@ -537,7 +537,8 @@ The layout represents the physical implementation of the CMOS circuit using the 
 The corresponding abstract view represents the simplified physical information of the cell that can be used by the digital implementation flow.
 The layout and abstract views are checked to ensure that the cell has the required physical structure and proper connectivity.
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/86413d01-40f7-4621-a6ee-e167aae14306" />
+
 
 Figure 1: Layout and abstract representation of the standard cell
 
@@ -559,7 +560,8 @@ The cell boundary also helps maintain:
 - Compatibility with the standard-cell library
 The layout is therefore organized inside the defined cell boundary.
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/e95abd32-a9a4-44e6-8ea7-0f348b14863a" />
+
 
 Figure 2: Defined standard-cell boundary
 
@@ -575,10 +577,6 @@ For the CMOS standard cell:
 The power and ground segments are connected to the appropriate transistor terminals and are routed through the required layout layers.
 
 Correct power and ground connectivity is essential for reliable circuit operation and for maintaining compatibility with the standard-cell architecture.
-
-III
-
-Figure 3: Power and ground connections in the layout
 
 # 12. Layout Extraction
 Once the physical layout is completed, the layout information is extracted to obtain the electrical representation of the circuit.
@@ -600,7 +598,8 @@ The extraction process identifies:
 The extracted information is used to generate a SPICE-compatible representation of the physical layout.
 This step is important because simulation of the extracted circuit provides a more realistic representation of the implemented layout than an ideal schematic-level simulation. 
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/eb02a2cf-1cb3-41a5-bace-d9fbe1789f46" />
+
 
 Figure 4: Extraction of the layout
 
@@ -613,7 +612,8 @@ The generated files are verified before proceeding to the SPICE simulation stage
 
 Typical files generated during this stage include the extracted layout information and SPICE-compatible netlist files.
 
-IIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/3bcaefed-e3d4-4527-954f-6ac970864dc6" />
+
 
 Figure 5: Generated extracted files and netlist
 
@@ -638,7 +638,8 @@ The SPICE file contains:
   
 The standard-cell subcircuit is defined using the extracted device parameters so that the physical implementation can be simulated using NGSPICE. 
 
-IIIII
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/84dfea15-8ac5-45e1-9151-b3ebda041bba" />
+
 
 Figure 6: SPICE file generated for simulation
 
@@ -663,6 +664,9 @@ are observed.
 
 The initial simulation output confirms that the extracted circuit is electrically connected and can be simulated successfully.
 
+<img width="700" alt="S" src="https://github.com/user-attachments/assets/818c71f2-49f3-4f52-8530-25657a50d42d" />
+
+
 # 16. Input and Output Waveforms
 The final simulation result is observed using the generated transient waveform.
 
@@ -676,7 +680,8 @@ The waveform confirms the expected inverter functionality.
 
 The simulated voltage levels are close to the expected supply and ground levels, demonstrating correct operation of the extracted standard cell.
 
-IIII
+<img width="700" alt="s" src="https://github.com/user-attachments/assets/01448e21-f1a4-4976-ae17-689507aa2de5" />
+
 
 Figure 8: Simulated input and output transient waveforms
 
