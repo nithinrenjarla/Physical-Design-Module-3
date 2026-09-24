@@ -32,21 +32,18 @@ Students will also study the major stages of the RTL-to-GDSII flow, including sy
  
 - Gain practical familiarity with an open-source RTL-to-GDSII flow.
 
-# Tools and Technologies Used
-
-| **Tool / Technology** |
-**Purpose** |
+| Tool / Technology | Purpose |
 |---|---|
-| **Yosys** | RTL synthesis and netlist generation |
-| **OpenLane** | Automated RTL-to-GDSII implementation |
-| **SKY130A PDK** | CMOS technology and standard-cell information |
-| **OpenROAD** | Physical-design implementation |
-| **OpenSTA** | Static timing analysis |
-| **Magic** | Layout viewing and physical verification |
-| **Netgen** | LVS comparison|
-| **GTKWave** | Waveform analysis|
-| **Verilog** | RTL hardware description |
-| **GDSII** | Final physical layout representation |
+| Yosys | RTL synthesis and netlist generation |
+| OpenLane | Automated RTL-to-GDSII implementation |
+| SKY130A PDK | CMOS technology and standard-cell information |
+| OpenROAD | Physical-design implementation |
+| OpenSTA | Static timing analysis |
+| Magic | Layout viewing and physical verification |
+| Netgen | LVS comparison |
+| GTKWave | Waveform analysis |
+| Verilog HDL | RTL hardware description |
+| GDSII | Final physical layout representation |
 
 # Table of Contents
 -Introduction to RTL-to-GDSII Flow
