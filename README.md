@@ -1,4 +1,4 @@
-# Physical-Design-Module-3
+~# Physical-Design-Module-3
 ## CMOS Inverter Design,Characterization,SKY130A Standard-Cell Layout & 16-Mask CMOS Fabrication
 
 # Overview
@@ -467,7 +467,7 @@ The final metallization stage converts the isolated transistor structures into a
 
 # 8. Complete CMOS Design and Fabrication Flow
 The overall workflow covered in this module can be summarized as:
-***/
+```text
 CMOS Inverter Design
         ↓
 SPICE Model Setup
@@ -509,4 +509,4 @@ Metal Interconnects
 Higher-Level Metal
         ↓
 Completed CMOS Structure
-***/
+```
