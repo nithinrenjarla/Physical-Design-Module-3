@@ -1,4 +1,4 @@
-~# Physical-Design-Module-3
+# Physical-Design-Module-3
 ## CMOS Inverter Design,Characterization,SKY130A Standard-Cell Layout & 16-Mask CMOS Fabrication
 
 # Overview
@@ -510,3 +510,263 @@ Higher-Level Metal
         ↓
 Completed CMOS Structure
 ```
+
+# 9. Layout and Abstract View
+The first stage of the design flow is the creation of the standard-cell layout using the SKY130A technology.
+
+The layout represents the physical implementation of the CMOS circuit using the required layers such as:
+
+- Metal layers
+  
+- Polysilicon
+  
+- Diffusion
+  
+- Contacts
+  
+- Well regions
+  
+- Power and ground connections
+The corresponding abstract view represents the simplified physical information of the cell that can be used by the digital implementation flow.
+The layout and abstract views are checked to ensure that the cell has the required physical structure and proper connectivity.
+
+IIII
+
+Figure 1: Layout and abstract representation of the standard cell
+
+# 10. Defining the Cell Boundary
+After creating the layout, a proper cell boundary is defined.
+
+The boundary determines the physical area occupied by the standard cell. It is important because standard cells must follow a well-defined height and width so that they can be placed together during physical design.
+
+The cell boundary also helps maintain:
+
+- Consistent cell dimensions
+  
+- Proper placement
+  
+- Alignment with neighbouring cells
+  
+- Correct power and ground rail positions
+  
+- Compatibility with the standard-cell library
+The layout is therefore organized inside the defined cell boundary.
+
+IIII
+
+Figure 2: Defined standard-cell boundary
+
+# 11. Power and Ground Connectivity
+The next step is to establish the power and ground connections of the cell.
+
+For the CMOS standard cell:
+
+- VDD provides the positive supply voltage.
+  
+- GND provides the reference/ground connection.
+- 
+The power and ground segments are connected to the appropriate transistor terminals and are routed through the required layout layers.
+
+Correct power and ground connectivity is essential for reliable circuit operation and for maintaining compatibility with the standard-cell architecture.
+
+III
+
+Figure 3: Power and ground connections in the layout
+
+# 12. Layout Extraction
+Once the physical layout is completed, the layout information is extracted to obtain the electrical representation of the circuit.
+
+The extraction process identifies:
+
+- Devices present in the layout
+  
+- Electrical connections
+  
+- Nodes
+  
+- Parasitic elements
+  
+- Device dimensions
+  
+- Power and ground connections
+  
+The extracted information is used to generate a SPICE-compatible representation of the physical layout.
+This step is important because simulation of the extracted circuit provides a more realistic representation of the implemented layout than an ideal schematic-level simulation. 
+
+IIII
+
+Figure 4: Extraction of the layout
+
+# 13. Generating the Extracted Netlist
+After extraction, the generated files are checked in the working directory.
+
+The extracted netlist contains the electrical information obtained from the physical layout. It provides the connectivity and device information required for circuit simulation.
+
+The generated files are verified before proceeding to the SPICE simulation stage.
+
+Typical files generated during this stage include the extracted layout information and SPICE-compatible netlist files.
+
+IIII
+
+Figure 5: Generated extracted files and netlist
+
+# 14. Creating the SPICE File
+The extracted circuit information is then used to prepare the SPICE simulation file.
+
+The SPICE file contains:
+
+- Technology/model information
+  
+- Cell subcircuit definition
+  
+- Input and output nodes
+  
+- Power supply connections
+  
+- Ground connections
+  
+- Transistor information
+  
+- Simulation parameters
+  
+The standard-cell subcircuit is defined using the extracted device parameters so that the physical implementation can be simulated using NGSPICE. 
+
+IIIII
+
+Figure 6: SPICE file generated for simulation
+
+# 15. Transient Simulation using NGSPICE
+The extracted SPICE circuit is simulated using NGSPICE.
+
+Transient analysis is performed to observe how the output voltage changes with time when the input signal is applied.
+
+The simulation setup applies a changing input signal while the cell is powered using the required supply voltage.
+
+During simulation, the important nodes such as:
+
+- Input
+  
+- Output
+  
+- VDD
+  
+- GND
+  
+are observed.
+
+The initial simulation output confirms that the extracted circuit is electrically connected and can be simulated successfully.
+
+# 16. Input and Output Waveforms
+The final simulation result is observed using the generated transient waveform.
+
+The input signal changes between logic LOW and logic HIGH. The CMOS inverter responds by producing the complementary output.
+
+Therefore:
+
+- When the input is LOW, the output becomes HIGH.
+- When the input is HIGH, the output becomes LOW.
+The waveform confirms the expected inverter functionality.
+
+The simulated voltage levels are close to the expected supply and ground levels, demonstrating correct operation of the extracted standard cell.
+
+IIII
+
+Figure 8: Simulated input and output transient waveforms
+
+# 17. Physical Verification and Layout Analysis
+After completing the basic layout, the physical implementation is examined carefully to ensure that the required layers and connections are present.
+
+The layout is checked for correct transistor formation, diffusion regions, polysilicon structures, contacts, metal routing, and power connections.
+
+The purpose of this stage is to make sure that the physical representation corresponds to the intended CMOS circuit.
+
+A properly constructed layout should maintain:
+
+- Correct device connectivity
+  
+- Correct power distribution
+  
+- Proper cell boundary
+  
+- Valid layer usage
+  
+- Proper transistor arrangement
+  
+# 18. Standard Cell Layout Structure
+The standard cell follows the conventional CMOS standard-cell arrangement.
+
+The PMOS network is placed towards the upper portion of the cell and is associated with the VDD rail, while the NMOS network is placed towards the lower portion and is associated with the GND rail.
+
+The input connection controls the gates of the transistors, while the output is obtained from the common connection between the pull-up and pull-down networks.
+
+This arrangement allows the cell to provide complementary logic operation while maintaining a regular physical structure suitable for standard-cell libraries.
+
+# 19.Overall Design Flow
+The complete design flow followed in this work is:
+```text
+SKY130A Technology
+        ↓
+Standard Cell Layout
+        ↓
+Define Cell Boundary
+        ↓
+Power & Ground Connections
+        ↓
+Layout Verification
+        ↓
+Parasitic Extraction
+        ↓
+SPICE Netlist Generation
+        ↓
+SPICE Simulation Setup
+        ↓
+NGSPICE Transient Analysis
+        ↓
+Input / Output Waveform
+        ↓
+Functional and Timing Analysis
+```
+
+# Overall Result
+The CMOS inverter design was successfully implemented, simulated, characterized, and taken through the physical design flow using the SKY130A technology. The complete process demonstrated the relationship between the transistor-level circuit, physical layout, extracted netlist, and post-layout SPICE simulation.
+
+The major results obtained from the work are:
+
+- The CMOS inverter circuit was designed using complementary PMOS and NMOS transistors.
+  
+- SPICE simulation was performed to verify the functional behaviour of the CMOS inverter.
+  
+- Transient analysis was used to observe the input and output voltage waveforms.
+  
+- The inverter's logic operation was verified for both LOW and HIGH input conditions.
+  
+- Rise and fall behaviour, propagation characteristics, switching behaviour, and voltage transfer characteristics were studied.
+  
+- Different transistor sizing conditions were analysed to understand their effect on inverter performance.
+  
+- The inverter was implemented as a physical standard-cell layout using the SKY130A technology.
+  
+- The cell boundary, power and ground connections, diffusion regions, polysilicon, contacts, and metal interconnects were established.
+  
+- The physical layout was extracted to generate an electrical representation of the implemented circuit.
+  
+- The extracted netlist was used to prepare the SPICE simulation setup.
+  
+- NGSPICE transient simulation was performed on the extracted circuit to verify the post-layout behaviour.
+  
+- The obtained waveform confirmed the expected CMOS inverter operation.
+  
+- The CMOS fabrication process was studied through the complete 16-mask fabrication sequence, including well formation, gate formation, LDD formation, source/drain formation, contacts, and metal interconnections.
+  
+Overall, the results establish a clear connection between circuit design → SPICE simulation → transistor characterization → physical layout → extraction → post-layout simulation → CMOS fabrication.
+
+# Conclusion
+This module provided a complete understanding of CMOS inverter design from the circuit level to the physical implementation and fabrication level. The CMOS inverter was first analysed using SPICE to understand its electrical and switching behaviour. Its transient response, voltage transfer characteristics, switching threshold, rise and fall behaviour, and the influence of transistor sizing were studied in detail.
+
+The design was then implemented as a SKY130A standard-cell layout. Important physical-design elements such as the cell boundary, PMOS and NMOS regions, power and ground rails, contacts, polysilicon, diffusion, and metal interconnects were considered during layout implementation.
+
+The completed layout was extracted to obtain the corresponding electrical netlist. This extracted representation was simulated using NGSPICE, and the resulting waveforms were compared with the expected CMOS inverter behaviour. This step demonstrated how physical layout information affects the electrical representation of the circuit and how post-layout simulation can be used for verification.
+
+In addition, the 16-mask CMOS fabrication process was studied to understand how the designed transistor structures are physically fabricated on a silicon wafer through multiple masking, implantation, deposition, etching, and metallization steps.
+
+Thus, the module successfully demonstrated the complete RTL-to-physical-design and CMOS implementation concept, while providing practical exposure to SPICE, NGSPICE, Magic VLSI, SKY130A PDK, layout extraction, standard-cell design, and CMOS fabrication technology.
